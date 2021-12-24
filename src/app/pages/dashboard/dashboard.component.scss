@@ -1,0 +1,19 @@
+.outer_div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(231, 231, 231);
+  box-sizing: border-box;
+  .company_matrics_div {
+    width: 100%;
+    padding-top: 2%;
+    .company_matrics_heading_div {
+      width: 100%;
+      padding-left: 2%;
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}

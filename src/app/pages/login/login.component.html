@@ -4,14 +4,18 @@
       <img src="../../../assets/logo/logo.png" />
     </div>
     <div class="form_div">
-      <form>
-        <input type="email" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button>Login</button>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
+        <input type="email" placeholder="Username" formControlName="username" />
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <button [disabled]="loginForm.invalid" type="submit">Login</button>
       </form>
     </div>
     <div class="forgot_password_div">
-      <a href="">Forgot password?</a>
+      <a href="mailto:support@smartserv.io">Forgot password?</a>
     </div>
   </div>
 </div>
