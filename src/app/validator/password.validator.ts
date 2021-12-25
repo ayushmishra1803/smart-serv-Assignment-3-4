@@ -1,12 +1,10 @@
-/* import { AbstractControl } from '@angular/forms';
+import { AbstractControl } from '@angular/forms';
 
 export function passwordCheck(
   control: AbstractControl
-): { [key: string]: any } | null {
+): /* { [key: string]: any } */ any | null {
   if (control) {
-    if (control.value.length < 8) {
-      return { PasswordError: { value: 'Minimum length required is 8' } };
-    }
+  
     if (!control.value.match(/[A-Z]/)) {
       return { PasswordError: { value: 'Upper case required' } };
     }
@@ -23,4 +21,3 @@ export function passwordCheck(
     }
   }
 }
- */
