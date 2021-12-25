@@ -14,16 +14,9 @@ export class LoginComponent implements OnInit {
     username: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
   });
-  logoUrl:string="https://drive.google.com/file/d/1aJc3BFBScf8Du0-pWERrhebI4xPlaQEd/view?usp=sharing"
-  ngOnInit(): void {
-    this.loginForm.valueChanges.subscribe(res=>{
-      console.log(this.loginForm);
-      
-    })
-  }
+
+  ngOnInit(): void {}
   onSubmit() {
-    //! for testing alert('login');
     this.router.navigate(['/dashboard']);
-   
   }
 }

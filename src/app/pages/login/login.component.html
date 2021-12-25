@@ -17,9 +17,18 @@
             type="password"
             placeholder="  Password"
             formControlName="password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@]{4,}$"
           />
 
-          <!--     <p>{{ loginForm.controls['password'].error.errorMessage  }}</p> -->
+          <p
+            *ngIf="
+              loginForm.controls['password'].invalid &&
+              loginForm.controls['password'].touched
+            "
+          >
+            The password must contain at least one uppercase , lowercase ,
+            number and only @ (as special character)
+          </p>
         </div>
         <button [disabled]="loginForm.invalid" type="submit">Login</button>
       </form>
