@@ -11,7 +11,9 @@
         : 'card_money_div_regular'
     "
   >
-    {{ companyItem?.money ? (452012 | currency) : companyItem?.count }}
+    {{
+      companyItem?.money ? (companyItem?.count | currency) : companyItem?.count
+    }}
   </div>
   <div class="card_title_div">{{ companyItem?.title }}</div>
 </div>
