@@ -63,6 +63,7 @@
             color: red;
             width: 65%;
             margin-top: 20px;
+            font-size: 12px;
           }
         }
         button {
@@ -71,11 +72,11 @@
           height: 40px;
           border-radius: 10px;
           color: white;
-          margin: 2%;
+          margin: 1%;
           font-size: 20px;
         }
-        button:disabled{
-          opacity: .5;
+        button:disabled {
+          opacity: 0.5;
         }
       }
     }
