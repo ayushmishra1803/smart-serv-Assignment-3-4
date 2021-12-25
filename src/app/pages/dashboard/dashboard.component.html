@@ -10,4 +10,40 @@
       ></app-dashboard-cards>
     </div>
   </div>
+  <div class="chart_divs">
+    <!-- 1st chart -->
+    <div class="location_div">
+      <div class="location_heading_div">
+        <span><b>Revenue By Job Location</b></span>
+      </div>
+      <div style="display: block">
+        <canvas
+          mdbChart
+          [chartType]="chartType"
+          [datasets]="chartDatasets"
+          [labels]="chartLabels"
+          [colors]="chartColors"
+          [options]="chartOptions"
+          [legend]="true"
+        >
+        </canvas>
+      </div>
+    </div>
+    <!-- 2nd chart -->
+    <div class="location_div second_div">
+      <div class="location_heading_div">
+        <span><b>Revenue By Job Location</b></span>
+      </div>
+      <canvas
+        mdbChart
+        [chartType]="chartType"
+        [datasets]="jobTypeDataSet"
+        [labels]="jobTypeLables"
+        [colors]="chartColors"
+        [options]="chartOptions"
+        [legend]="true"
+      >
+      </canvas>
+    </div>
+  </div>
 </div>

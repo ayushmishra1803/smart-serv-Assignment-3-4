@@ -5,10 +5,10 @@
   flex-direction: column;
   background-color: rgb(231, 231, 231);
   box-sizing: border-box;
+  padding: 1.8%;
   .company_matrics_div {
     box-sizing: border-box;
     width: 100%;
-    padding-top: 1%;
     .company_matrics_heading_div {
       width: 100%;
       padding-left: 1%;
@@ -16,15 +16,47 @@
       span {
         font-size: 18px;
         box-sizing: border-box;
+        font-weight: 500;
       }
     }
+    .card_div {
+      width: 98%;
+      margin: 1%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 2%;
+      grid-row-gap: 5%;
+    }
   }
-  .card_div {
-    width: 98%;
-    margin: 1%;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 2%;
-    grid-row-gap: 5%;
+  .chart_divs {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2%;
+    padding: 1%;
+    .location_div {
+      width: 47%;
+      display: flex;
+      flex-direction: column;
+      .location_heading_div {
+        width: 100%;
+        padding-left: 1%;
+        box-sizing: border-box;
+
+        span {
+          font-size: 18px;
+          box-sizing: border-box;
+          font-weight: 500;
+        }
+      }
+      canvas {
+        margin-top: 2%;
+        background-color: white;
+      }
+    }
+    .second_div {
+      margin-left: 2%;
+    }
   }
 }
