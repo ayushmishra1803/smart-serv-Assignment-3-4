@@ -1,8 +1,17 @@
 <div class="card">
-<div>
-{{452012 |currency}}
-</div>
-<div>
-
-</div>
+  <div class="card_money_div" *ngIf="companyItem.color === 'primary'">
+    {{ companyItem?.money ? (452012 | currency) : companyItem?.count }}
+  </div>
+  <div
+    class="card_money_div"
+    *ngIf="companyItem?.color != 'primary'"
+    [ngClass]="
+      companyItem?.color === 'danger'
+        ? 'card_money_div_danger'
+        : 'card_money_div_regular'
+    "
+  >
+    {{ companyItem?.money ? (452012 | currency) : companyItem?.count }}
+  </div>
+  <div class="card_title_div">{{ companyItem?.title }}</div>
 </div>
